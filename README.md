@@ -1,2 +1,2 @@
 # image-gallery
-An assignment to create a image gallery with user accessibility and image optimisation
+An assignment to create an image gallery with user accessibility and image optimisation
