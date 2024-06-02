@@ -1,4 +1,106 @@
 * {
   box-sizing: border-box;
-  background-color: peru;
+  background-color: black;
+}
+
+#thumbnail-container {
+  display: flex;
+  overflow-y: scroll;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.thumbnail-image {
+  height: 13vh;
+  border: 1px solid black;
+}
+
+#image-container {
+  background-color: black;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: grey;
+  outline-color: yellow;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0.5rem;
+  border-radius: 20px;
+  opacity: 90%;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: lightgray;
+  border: 1px solid yellow;
+}
+
+#button-left {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#button-right {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-image {
+  min-width: 300px;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  #thumbnail-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #image-container {
+    padding: 0;
+  }
+
+  .main-image {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  #image-container {
+    padding: 0;
+  }
+
+  .main-image {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #thumbnail-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+  }
+
+  .thumbnail-image {
+    padding: 0;
+    height: 15vh;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .thumbnail-image:hover {
+    transform: scale(1.1);
+  }
 }
