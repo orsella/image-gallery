@@ -32,3 +32,7 @@ I mostly used w3, mdn and stackoverflow for general help and more information ab
 When I was trying to work out how to use arrow keys for navigation, the following link was helpful as it showed how onkeydown worked so I could then use this function with a if loop.
 
 stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+
+When adding the functionality for the screen reader to read the alt tag when the image was changed, I found the properties suggested to make the div invisible would then remove the screen reader functionality part. I found some css that I could apply to a span around my div that would hide it but keep the screen reader from being able to interact with the alt descriptions
+
+stackoverflow.com/questions/62107074/how-to-hide-a-text-and-make-it-accessible-by-screen-reader

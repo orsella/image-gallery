@@ -46,6 +46,7 @@ createThumbnails(images);
 
 const mainContainer = document.getElementById("image-container");
 let mainPicture = document.createElement("img");
+let description = document.getElementById("description");
 mainPicture.setAttribute("src", images[currentImgIndex].src);
 mainPicture.setAttribute("alt", images[currentImgIndex].alt);
 mainPicture.classList.add("main-image");
@@ -54,6 +55,7 @@ mainContainer.appendChild(mainPicture);
 function createMainImage() {
   mainPicture.setAttribute("src", images[currentImgIndex].src);
   mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+  description.textContent = images[currentImgIndex].alt;
 }
 
 const leftButton = document.getElementById("button-left");
@@ -62,10 +64,12 @@ leftButton.addEventListener("click", () => {
     currentImgIndex += 4;
     mainPicture.setAttribute("src", images[currentImgIndex].src);
     mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+    description.textContent = images[currentImgIndex].alt;
   } else {
     currentImgIndex -= 1;
     mainPicture.setAttribute("src", images[currentImgIndex].src);
     mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+    description.textContent = images[currentImgIndex].alt;
   }
 });
 
@@ -75,10 +79,12 @@ rightButton.addEventListener("click", () => {
     currentImgIndex -= 4;
     mainPicture.setAttribute("src", images[currentImgIndex].src);
     mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+    description.textContent = images[currentImgIndex].alt;
   } else {
     currentImgIndex += 1;
     mainPicture.setAttribute("src", images[currentImgIndex].src);
     mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+    description.textContent = images[currentImgIndex].alt;
   }
 });
 
@@ -92,20 +98,24 @@ function checkKey(e) {
       currentImgIndex += 4;
       mainPicture.setAttribute("src", images[currentImgIndex].src);
       mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+      description.textContent = images[currentImgIndex].alt;
     } else {
       currentImgIndex -= 1;
       mainPicture.setAttribute("src", images[currentImgIndex].src);
       mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+      description.textContent = images[currentImgIndex].alt;
     }
   } else if (e.keyCode == "39") {
     if (currentImgIndex == 4) {
       currentImgIndex -= 4;
       mainPicture.setAttribute("src", images[currentImgIndex].src);
       mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+      description.textContent = images[currentImgIndex].alt;
     } else {
       currentImgIndex += 1;
       mainPicture.setAttribute("src", images[currentImgIndex].src);
       mainPicture.setAttribute("alt", images[currentImgIndex].alt);
+      description.textContent = images[currentImgIndex].alt;
     }
   }
 }
